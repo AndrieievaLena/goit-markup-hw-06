@@ -33,6 +33,12 @@
   --background-backdrop: rgba(0, 0, 0, 0.2);
   --modal-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  --invite-button-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  --invite-form-border: rgba(255, 255, 255, 0.3);
+  --modal-border: rgba(33, 33, 33, 0.2);
+  --shadow_btn_send: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  --checkbox_color: #212121;
+  --coments_color: rgba(117, 117, 117, 0.5);
 }
 html {
   box-sizing: border-box;
@@ -762,4 +768,213 @@ img {
 .social-link:focus {
   background-color: var(--accent-color);
   color: var(--white-color);
+}
+.form {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.block-form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 93px;
+}
+.name_form {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white-color);
+}
+.invite-box {
+  display: flex;
+}
+.invite_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 12px;
+  background-color: var(--accent-color);
+  border-radius: 4px;
+  box-shadow: var(--invite-button-shadow);
+  height: 50px;
+  width: 200px;
+  color: var(--white-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.8;
+  letter-spacing: 0.06em;
+}
+.button_footer_svg {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+}
+.invite-form::placeholder {
+  padding-left: 16px;
+}
+
+.invite-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--dark-section);
+  color: var(--white-color);
+  height: 50px;
+  width: 358px;
+  border: 1px solid var(--invite-form-border);
+  border-radius: 4px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+}
+/* MODAL */
+.title_modal {
+  margin: 0;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 2px;
+}
+.form_modal {
+  display: flex;
+  flex-direction: column;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.name_user_box {
+  width: 448px;
+  height: 40px;
+  border: 1px solid var(--modal-border);
+  border-radius: 4px;
+  margin-top: 4px;
+  padding-left: 42px;
+}
+.name_user_box:focus ~ .icons_user {
+  fill: var(--accent-color);
+}
+.tel_user_box:focus ~ .icons_user {
+  fill: var(--accent-color);
+}
+.email_user_box:focus ~ .icons_user {
+  fill: var(--accent-color);
+}
+.name_user_box:focus {
+  border: solid var(--accent-color);
+}
+.tel_user_box:focus {
+  border: solid var(--accent-color);
+}
+.email_user_box:focus {
+  border: solid var(--accent-color);
+}
+.coments_user_box:focus {
+  border: solid var(--accent-color);
+}
+.btn-close:focus .img-close {
+  color: var(--accent-color);
+}
+.tel_user_box {
+  width: 448px;
+  height: 40px;
+  border: 1px solid var(--modal-border);
+  border-radius: 4px;
+  margin-top: 4px;
+  padding-left: 42px;
+}
+.email_user_box {
+  width: 448px;
+  height: 40px;
+  border: 1px solid var(--modal-border);
+  border-radius: 4px;
+  margin-top: 4px;
+  padding-left: 42px;
+}
+.coments_user_box {
+  border: 1px solid var(--modal-border);
+  border-radius: 4px;
+  margin-top: 4px;
+  height: 140px;
+  padding: 12px 16px;
+}
+.coments_user_box::placeholder {
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: var(--coments_color);
+}
+textarea {
+  resize: none;
+}
+.coments_block {
+  display: flex;
+}
+.label_name,
+.label_tel,
+.label_email,
+.label_coments {
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: var(--second-text-color);
+}
+.name_box,
+.tel_box_modal,
+.mail_box_modal,
+.coments_box_modal {
+  margin-top: 10px;
+  position: relative;
+}
+.coments_box_modal {
+  display: flex;
+  flex-direction: column;
+}
+.icons_user {
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  display: inline-block;
+  justify-content: center;
+  top: 50%;
+  left: 12px;
+  transform: translateY(15%);
+}
+.button_send_form {
+  text-align: center;
+  background-color: var(--accent-color);
+  color: var(--white-color);
+  box-shadow: var(--shadow_btn_send);
+  border-radius: 4px;
+  width: 200px;
+  height: 50px;
+  margin-top: 30px;
+  margin-left: 124px;
+  padding: 0;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.8;
+  letter-spacing: 0.06em;
+  border: none;
+}
+.box_accept {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.text_accept {
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: var(--second-text-color);
+  margin-left: 8.38px;
+}
+.checkbox_accept {
+  width: 16px;
+  height: 15px;
+  border: 1 px solid var(--checkbox_color);
+}
+.link_document {
+  color: var(--accent-color);
 }

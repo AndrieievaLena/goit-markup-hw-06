@@ -310,8 +310,8 @@
 
                 </section>
                 </main>
-            <footer class="section-footer">
-            <div class="conteiner footer-box">
+          <footer class="section-footer">
+                <div class="conteiner footer-box">
                     <div>
                         <div class="logo-box">
                             <a class="logo-company footer-logo" href="/"><span class="first-part-logo">Web</span>Studio</a>
@@ -327,8 +327,8 @@
                                 </li>
                         
                             </ul>
-                        </div>
-                    </div>
+                      </div>
+                   </div>
                     <div class="footer-link">
                         <h3 class="footer-title"> присоединяйтесь</h3>
                         <div class="link-box">
@@ -354,18 +354,68 @@
                             </a>
                         </div>
                     </div>
-            </div>
-
-            </footer>
+                    <div class="form">
+                        <div class="block-form">
+                            <h3 class="name_form">Подпишитесь на рассылку</h3>
+                            <form class="invite-box">
+                                <input class="invite-form" type="email" name="user-mail" placeholder="E-mail ">
+                                <button class="invite_button" type="submit">Подписаться
+                                    <svg class="button_footer_svg">
+                                        <use href="./images/icons.svg#icon-icon-send-1"></use>
+                                    </svg>
+                                </button>
+                           
+                            </form>
+                        </div>
+                  </div>
+               </div> 
+               
+              
+          </footer>
         <div class="backdrop is-hidden" data-modal>
-            <div class="modal">
+            <div div class="modal">
                 <button class="btn-close" data-modal-close>
                     <svg class="img-close">
-                        <use href="./images/icons.svg#icon-close-1"></use>
+                        <use href="./images/icons.svg#icon-close-2-1"></use>
                     </svg>
-                </button>
-            </div>
+               </button>
+                <h3 class="title_modal">Оставьте свои данные, мы вам перезвоним</h3>
+               <form class="form_modal">
+                    <div class="name_box">
+                         <label class="label_name" for="name">Имя</label>
+                       <input class="name_user_box" type="text" name="name" id="name"/>
+                        <svg class="icons_user">
+                            <use href="./images/icons.svg#icon-person-black-18dp-1-1"></use>
+                        </svg>
+                    </div>
+                    <div class="tel_box_modal">
+                        <label class="label_tel" for="tel">Телефон</label>
+                        <input class="tel_user_box" type="tel" name="tel" id="tel" />
+                        <svg class="icons_user">
+                            <use href="./images/icons.svg#icon-phone-black-18dp-1-1"></use>
+                        </svg>
+                    </div>
+                    <div class="mail_box_modal">
+                        <label class="label_email" for="email">Почта</label>
+                        <input class="email_user_box" type="email" name="email" id="email" />
+                        <svg class="icons_user">
+                            <use href="./images/icons.svg#icon-email-black-18dp-1-1"></use>
+                        </svg>
+                    </div>
+                    <div class="coments_box_modal">
+                        <label class="label_coments" for="coments">Комментарий</label>
+                    <textarea class="coments_user_box"  name="coments" id="coments"cols="30" rows="10" placeholder="Введите текст"></textarea>
+                    </div>
+                    <div class="box_accept">
+                        <input class="checkbox_accept" type="checkbox" name="document_accept" id="accept"  />
+                        <label class="text_accept" for="accept">Соглашаюсь с рассылкой и принимаю <a href="#" class="link_document">Условия договора</a></label>
+                    </div>
+
+                    <button class="button_send_form" type="submit">Отправить</button>
+              </form>
+         </div>
         </div>
+       
         <script src="./model.js"></script>
     </body>
 </html>
