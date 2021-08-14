@@ -861,16 +861,20 @@ img {
   fill: var(--accent-color);
 }
 .name_user_box:focus {
-  border: solid var(--accent-color);
+  border: 1px solid var(--accent-color);
+  outline: none;
 }
 .tel_user_box:focus {
-  border: solid var(--accent-color);
+  border: 1px solid var(--accent-color);
+  outline: none;
 }
 .email_user_box:focus {
-  border: solid var(--accent-color);
+  border: 1px solid var(--accent-color);
+  outline: none;
 }
 .coments_user_box:focus {
-  border: solid var(--accent-color);
+  border: 1px solid var(--accent-color);
+  outline: none;
 }
 .btn-close:focus .img-close {
   color: var(--accent-color);
@@ -895,8 +899,9 @@ img {
   border: 1px solid var(--modal-border);
   border-radius: 4px;
   margin-top: 4px;
-  height: 140px;
-  padding: 12px 16px;
+  height: 120px;
+  padding-top: 12px;
+  padding-left: 16px;
 }
 .coments_user_box::placeholder {
   font-size: 12px;
@@ -974,6 +979,7 @@ textarea {
   width: 16px;
   height: 15px;
   border: 1 px solid var(--checkbox_color);
+  outline: none;
 }
 .link_document {
   color: var(--accent-color);
