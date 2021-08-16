@@ -254,19 +254,36 @@ img {
   transform: translate(-50%, -50%);
 }
 .img-close {
-  width: 30px;
-  height: 30px;
-  background-color: var(--white-color);
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  transform: translate(-50%, -45%);
+  transition: 250ms var(--timer-fuction);
 }
-.btn-close {
+.first_btn_modal {
   display: flex;
   margin-left: auto;
-  border: none;
-  cursor: pointer;
-  border-radius: 4px;
-  background-color: var(--white-color);
+  justify-content: flex-end;
   padding: 8px 8px 0px 0px;
-  fill: var(--white-color);
+}
+.btn-close {
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--white-color);
+  transition: 2500ms var(--timer-fuction);
+}
+.first_btn_modal:hover .img-close {
+  fill: var(--accent-color);
+}
+.btn-close:focus .img-close {
+  fill: var(--accent-color);
+}
+
+.first_btn_modal:focus .img-close {
+  fill: var(--accent-color);
 }
 .hero-title {
   color: var(--white-color);
@@ -805,14 +822,12 @@ img {
   font-size: 16px;
   line-height: 1.8;
   letter-spacing: 0.06em;
+  cursor: pointer;
 }
 .button_footer_svg {
   width: 24px;
   height: 24px;
   margin-left: 10px;
-}
-.invite-form::placeholder {
-  padding-left: 16px;
 }
 
 .invite-form {
@@ -821,11 +836,13 @@ img {
   justify-content: center;
   background-color: var(--dark-section);
   color: var(--white-color);
+  padding: 16px;
   height: 50px;
   width: 358px;
   border: 1px solid var(--invite-form-border);
   border-radius: 4px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  outline: none;
 }
 /* MODAL */
 .title_modal {
@@ -843,6 +860,7 @@ img {
   padding-left: 40px;
   padding-right: 40px;
 }
+
 .name_user_box {
   width: 448px;
   height: 40px;
@@ -850,6 +868,7 @@ img {
   border-radius: 4px;
   margin-top: 4px;
   padding-left: 42px;
+  transition: 250ms var(--timer-fuction);
 }
 .name_user_box:focus ~ .icons_user {
   fill: var(--accent-color);
@@ -876,9 +895,7 @@ img {
   border: 1px solid var(--accent-color);
   outline: none;
 }
-.btn-close:focus .img-close {
-  color: var(--accent-color);
-}
+
 .tel_user_box {
   width: 448px;
   height: 40px;
@@ -886,6 +903,7 @@ img {
   border-radius: 4px;
   margin-top: 4px;
   padding-left: 42px;
+  transition: 250ms var(--timer-fuction);
 }
 .email_user_box {
   width: 448px;
@@ -894,6 +912,7 @@ img {
   border-radius: 4px;
   margin-top: 4px;
   padding-left: 42px;
+  transition: 250ms var(--timer-fuction);
 }
 .coments_user_box {
   border: 1px solid var(--modal-border);
@@ -902,6 +921,7 @@ img {
   height: 120px;
   padding-top: 12px;
   padding-left: 16px;
+  transition: 250ms var(--timer-fuction);
 }
 .coments_user_box::placeholder {
   font-size: 12px;
@@ -944,6 +964,7 @@ textarea {
   top: 50%;
   left: 12px;
   transform: translateY(15%);
+  transition: 250ms var(--timer-fuction);
 }
 .button_send_form {
   text-align: center;
@@ -961,6 +982,7 @@ textarea {
   line-height: 1.8;
   letter-spacing: 0.06em;
   border: none;
+  cursor: pointer;
 }
 .box_accept {
   display: flex;
@@ -969,18 +991,55 @@ textarea {
   margin-top: 20px;
 }
 .text_accept {
+  display: flex;
+  align-items: center;
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: var(--second-text-color);
-  margin-left: 8.38px;
 }
 .checkbox_accept {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.text_accept::before {
+  content: "";
+  display: inline-block;
   width: 16px;
   height: 15px;
-  border: 1 px solid var(--checkbox_color);
-  outline: none;
+  border: 2px solid black;
+  border-radius: 2px;
+  margin-right: 8.38px;
+  cursor: pointer;
+}
+
+.checkbox_accept:checked + .text_accept::before {
+  content: "";
+  background-color: var(--accent-color);
+  border-color: transparent;
+  background-image: url(../images/accept.svg);
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: 250ms var(--timer-fuction);
+  cursor: pointer;
 }
 .link_document {
   color: var(--accent-color);
+  margin-left: 7px;
+  text-decoration: none;
+  position: relative;
+}
+.text_accept .link_document::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: var(--accent-color);
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  transform: translateY(-5px);
 }
